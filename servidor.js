@@ -36,7 +36,7 @@ app.get('/items-random', (req, res) => {
     async function read(ruta) {
         try {
             const archivo = await fs.promises.readFile(ruta);
-            largoArray = JSON.parse(archivo).length - 1; 
+            largoArray = JSON.parse(archivo).length - 1;
             res.send(JSON.parse(archivo)[obtenerRandom(0, largoArray).toFixed(0)]);
         } catch (err) {
             res.send("No hay productos en este momento");
