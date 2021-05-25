@@ -55,4 +55,3 @@ app.get('/visitas', (req, res) => {
 const server = app.listen(puerto, () => {
     console.log(`Servidor iniciado en el puerto http://localhost:${puerto}`)
 })
-
