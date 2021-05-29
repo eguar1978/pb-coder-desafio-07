@@ -24,7 +24,7 @@ app.get('/items', (req, res) => {
             const archivo = await fs.promises.readFile(ruta);
             res.send(JSON.parse(archivo));
         } catch (err) {
-            console.log("No hay productos en este momento");
+            res.send("No hay productos en este momento");
         }
     }
     read(ruta);
